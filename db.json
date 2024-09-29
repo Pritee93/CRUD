@@ -1,0 +1,32 @@
+{
+  "bookings": [
+    {
+      "id": "c147",
+      "name": "John",
+      "source": "Pune",
+      "destination": "Mumbai",
+      "date": "2024-09-08"
+    },
+    {
+      "id": "c5f3",
+      "name": "Richard",
+      "source": "Chennai",
+      "destination": "New Delhi",
+      "date": "2024-10-09"
+    },
+    {
+      "id": "353d",
+      "name": "Pritee Kedar",
+      "source": "Mumbai",
+      "destination": "Bangalore",
+      "date": "2024-10-08"
+    },
+    {
+      "id": "7915",
+      "name": "priyanka",
+      "source": "Chennai",
+      "destination": "New Delhi",
+      "date": "2024-12-24"
+    }
+  ]
+}

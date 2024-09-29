@@ -1,0 +1,36 @@
+<div class="container w-50 m-auto border p-2 mt-2">
+    <h6 class="text-center">Create Booking</h6>
+    <form (ngSubmit)="createNewBooking()">
+        <div class="mb-3">
+            <label for="id1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="id1" name="name" [(ngModel)]="bookingObj.name">
+        </div>
+        <div class="md-3 mb-3">
+            <label for="id2" class="form-label">Source</label>
+            <div class="dropdown">
+                <select class="w-100 mb-1" id="id2" name="source" [(ngModel)]="bookingObj.source">
+                    <option value="">Select City</option>
+                    <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="md-3 mb-3">
+            <label for="id3" class="form-label">Destination</label>
+            <div class="dropdown">
+                <select class="w-100" id="id3" name="destination" [(ngModel)]="bookingObj.destination">
+                    <option value="">Select city</option>
+                    <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="id4" class="form-label">Select date: </label>
+            <input type="date" class="form-control" id="id4" name="date" [(ngModel)]="bookingObj.date">
+        </div>
+
+        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="button" class="btn btn-primary mx-1" routerLink="/bus/booking-list">Back</button>
+
+    </form>
+
+</div>

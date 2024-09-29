@@ -1,0 +1,33 @@
+<div class="container mt-2">
+    <h6>Booking Details:</h6>
+    <button type="button" class="btn btn-secondary my-3" routerLink="/bus/create-booking">Create new bookings</button>
+    
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Source</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Date</th>
+          </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookingList; let i = index">
+              <td>
+                <a class="ms-2 cursor" (click)="editBooking(booking.id)">EDIT</a>
+                <a class="ms-2 cursor" (click)="deleteBooking(booking.id,i)">DELETE</a>
+              </td>
+              <!-- <td>{{i+1}}</td> -->
+            <td>{{booking.id}}</td>
+            <td>{{booking.name}}</td>
+            <td>{{booking.source}}</td>
+            <td>{{booking.destination}}</td>
+            <td>{{booking.date}}</td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="sendBookingCount()">Send Count</button>
